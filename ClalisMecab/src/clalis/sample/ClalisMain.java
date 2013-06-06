@@ -1,7 +1,7 @@
 //=======================================================================
 //ClalisSample
 //  ClassName : ClalisMain
-//  概要      : Clalis 感情付与メソッドの使用サンプル
+//  概要      : Clalis 形態素解析 ClalisMecab サンプル
 //
 // Copyright  : 2011-2013 LipliStyle. All Rights Reserved.
 //

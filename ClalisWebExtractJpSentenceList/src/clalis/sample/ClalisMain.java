@@ -1,10 +1,10 @@
 //=======================================================================
 //ClalisSample
 //  ClassName : ClalisMain
-//  概要      : Clalis 感情付与メソッドの使用サンプル
+//  概要      : Clalis Web日本語文章抽出 ClalisWebExtractJpSentenceList
 //
 // Copyright  : 2011-2013 LipliStyle. All Rights Reserved.
-// 
+//
 // ライセンス : MIT License
 // ・本ソフトウェアは無保証です。作者は責任を追いません。
 // ・上記の著作権表示を記載して下さい。

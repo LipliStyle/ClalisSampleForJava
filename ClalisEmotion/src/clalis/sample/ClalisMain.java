@@ -1,9 +1,15 @@
 //=======================================================================
+//ClalisSample
 //  ClassName : ClalisMain
 //  概要      : Clalis 感情付与メソッドの使用サンプル
 //
-//  Clalis
-//  Copyright(c) 2011-2013 LipliStyle. All Rights Reserved.
+// Copyright  : 2011-2013 LipliStyle. All Rights Reserved.
+//
+// ライセンス : MIT License
+// ・本ソフトウェアは無保証です。作者は責任を追いません。
+// ・上記の著作権表示を記載して下さい。
+// ・上記の２項に同意頂ければ自由に使用して頂けます。
+//
 //=======================================================================
 package clalis.sample;
 
@@ -38,19 +44,19 @@ public class ClalisMain {
 		//ポストデータの作成
 		final List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>();
 		nameValuePair.add(new BasicNameValuePair("sentence", "今日はお天気がいいですね。お洗濯にはもってこいです！"));
-		
+
 		//結果の取得
 		String jsonText = inputStreemToString(post("http://liplis.mine.nu/Clalis/v30/Post/Json/clalisEmotional.aspx", nameValuePair).getEntity().getContent());
-		
+
 		//API結果受け取り用クラス
 		ResEmotional result =  new Gson().fromJson(jsonText, ResEmotional.class);
-		
+
 		//ResEmotionalクラスの「resWordList」プロパティに結果が格納されているので、回して取り出す。
 		for(MsgLeafAndEmotion msg : result.resWordList)
 		{
 			System.out.println("単語:" + msg.name + " , 感情:" + msg.emotion + " , 感情値:" + msg.point);
 			}
-		
+
 		} catch (IOException e) {
 			return ;
 		}
